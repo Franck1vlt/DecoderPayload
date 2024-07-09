@@ -1,7 +1,6 @@
 # DecoderPayload
 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](image.png) ![alt text](image-1.png)
 
 ## Description
 DecoderPayload est un projet conçu pour décoder des payloads LoraWan et afficher le résultat dans le but de l'implémenter dans une solution IoT. Il permet de faciliter l'intégration des données LoraWan dans des applications IoT.
