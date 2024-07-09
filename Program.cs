@@ -5,7 +5,13 @@ namespace DecoderPayload
 {
     class Program
     {
+
         static void Main(string[] args)
+        {
+            TestDecoderEM400X(args);
+            TestDecoderEM500Ud(args);
+        }
+        static void TestDecoderEM400X(string[] args)
         {
             // Exemple de payload en bytes
             byte[] payload1 = { 0x01, 0x75, 0x5C, 0x03, 0x67, 0x01, 0x01, 0x04, 0x82, 0x44, 0x08, 0x05, 0x00, 0x01 };
@@ -43,5 +49,26 @@ namespace DecoderPayload
             Console.WriteLine($"Motion Status: {decoded.MotionStatus}");
             Console.WriteLine($"Geofence Status: {decoded.GeofenceStatus}");
         }
+
+        static void TestDecoderEM500Ud(string[] args)
+        {
+            // Données d'entrée sous forme de tableau de bytes
+            byte[] input = new byte[] { 0x01, 0x75, 0x64, 0x03, 0x82, 0x1E, 0x00 };
+
+            // Création d'une instance de EM500UDLPayloadDecoder
+            var decoder = new EM500UDLPayloadDecoder();
+
+            // Appel de la méthode DecodeUplink avec les données d'entrée
+            decoder.DecodeUplink(input);
+
+            // Récupération des données décodées
+            var decodedData = EM500UDLPayloadDecoder.Milesight(input);
+
+            // Affichage du résultat sous forme JSON
+            Console.WriteLine($"{{\n  \"battery\": {decodedData.Battery},\n  \"distance\": {decodedData.Distance}\n}}");
+        }
+
+
+
     }
 }
