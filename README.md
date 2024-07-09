@@ -7,12 +7,12 @@ DecoderPayload est un projet conçu pour décoder des payloads LoraWan et affich
 
 DecoderPayload is a project designed to decode LoraWan payloads and display the result with the aim of implementing it in an IoT solution. It allows for easier integration of LoraWan data into IoT applications.
 
+This project was developed as part of an internship at IO CONNECT Solutions. All rights reserved.
+
 ## Inspiration
 Ce projet a utilisé des exemples et s'est inspiré du lien suivant pour le code de décodage : [Milesight-IoT/SensorDecoders](https://github.com/Milesight-IoT/SensorDecoders/tree/main/EM_Series).
 
 This project used examples and was inspired by the following link for the decoding code: [Milesight-IoT/SensorDecoders](https://github.com/Milesight-IoT/SensorDecoders/tree/main/EM_Series).
-
-This project was developed as part of an internship at IO CONNECT Solutions. All rights reserved.
 
 ## Auteurs
 - **Franck VALMONT** - [GitHub](https://github.com/Franck1vlt)
